@@ -3,7 +3,7 @@ from pydantic import BaseModel
 
 app = FastAPI(title="Student Details Management API")
 
-In-Memory Database
+# In-Memory Database
 students_db = {
     1: {"name": "Aarav", "age": 21, "course": "Data Science"},
     2: {"name": "Priya", "age": 22, "course": "Web Development"},
@@ -11,16 +11,16 @@ students_db = {
 }
 
 
-Data Validation Model
+# Data Validation Model
 class Student(BaseModel):
     name: str 
     age: int
     course: str
 
 
-==========================================
-READ (GET) - View All or Filter by Course
-==========================================
+# ==========================================
+# READ (GET) - View All or Filter by Course
+# ==========================================
 @app.get("/students/")
 def get_students(course: str = None):
     if course:
