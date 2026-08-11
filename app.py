@@ -3,7 +3,7 @@ import streamlit as st
 
 # Configure Page
 st.set_page_config(page_title="Student Management Page", layout="centered")
-st.title("🎓 Student Management :heart::sweat_drops:")
+st.title("🎓 Student Management :heart:")
 
 # Backend API Base URL Configuration
 API_URL = st.sidebar.text_input("Backend API Base URL", value="http://127.0.0.1:8000")
